@@ -1,0 +1,11 @@
+<div class="flex flex-col gap-8 lg:gap-12 2xl:gap-16 pt-4 2xl:pt-6 items-center w-full]">
+  <ng-container *ngFor="let item of items">
+    <app-commander-avatar-mini
+      [imageUrl]="item.miniAvatarUrl"
+      [alt]="item.title"
+      [isApplied]="appliedGuiseId === item.id || (appliedGuiseId === null && item.type === 'COMMANDER')"
+      [isSelected]="selectedItemId === item.id"
+      (click)="select(item)"
+    ></app-commander-avatar-mini>
+  </ng-container>
+</div>

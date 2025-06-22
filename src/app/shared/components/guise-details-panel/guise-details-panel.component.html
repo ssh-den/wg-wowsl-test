@@ -1,0 +1,10 @@
+<app-section-title title="Visual and sound effects"></app-section-title>
+
+<div class="grid grid-cols-2 gap-2 lg:gap-4">
+  <app-icon-badge
+    *ngFor="let effect of effects"
+    [imageUrl]="effect.iconUrl"
+    [title]="effect.title"
+    [subtitle]="effect.description">
+  </app-icon-badge>
+</div>

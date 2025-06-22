@@ -1,0 +1,33 @@
+@use "tailwindcss";
+
+/* 100% for the iPhones */
+html, body {
+  @apply h-[100dvh] m-0 overflow-hidden;
+}
+
+/* Special text colors for gold, secondary gold and freexp */
+.text-gold {
+  color: #FFCC66;
+}
+
+.text-gold-muted {
+  color: #a88b4e;
+}
+
+.text-freexp {
+  color: #B3FFC7;
+}
+
+/* Custom font */
+@theme {
+  --font-sans: "Barlow", system-ui, sans-serif;
+}
+
+/* Hiding scrollbar */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}

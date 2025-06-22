@@ -1,0 +1,49 @@
+<div class="bg-slate-900 bg-cover bg-center h-[100dvh] flex flex-col relative"
+  style="background-image: url('assets/bg/bg_smoke_water.png');">
+
+  <!-- Preloading animation screen -->
+  <app-loading-screen *ngIf="!loaded" class="absolute inset-0 z-50 pointer-events-none">
+  </app-loading-screen>
+
+  <!-- Rotate device warning -->
+  <app-rotate-device-screen *ngIf="isPortrait$ | async" class="absolute inset-0 z-50 pointer-events-auto">
+  </app-rotate-device-screen>
+
+  <!-- Header -->
+  <div class="z-10 px-8">
+    <ng-container *ngIf="user$ | async as user">
+      <ng-container *ngIf="commander$ | async as commander">
+        <app-header class="max-h-[18dvh]" [user]="user" [commander]="commander" [resources]="resources">
+        </app-header>
+      </ng-container>
+    </ng-container>
+  </div>
+
+  <!-- Main layout -->
+  <main class="z-10 flex-1 flex gap-4 px-6 overflow-hidden">
+
+    <!-- Big commander avatar -->
+    <section class="w-[27%] flex flex-col justify-end overflow-hidden">
+      <app-commander-avatar-max [selectedItem]="selectedItem$ | async">
+      </app-commander-avatar-max>
+    </section>
+
+    <!-- List of guises -->
+    <section class="w-[15%] min-h-0 overflow-y-auto overflow-x-visible pb-4 scrollbar-hide">
+      <ng-container *ngIf="items$ | async as items">
+        <app-commander-list [items]="items" [appliedGuiseId]="appliedGuiseId$ | async"
+          [selectedItemId]="(selectedItem$ | async)?.id ?? null" (itemSelected)="onItemSelected($event)">
+        </app-commander-list>
+      </ng-container>
+    </section>
+
+    <!-- Commander details -->
+    <section class="flex-1 flex flex-col overflow-hidden items-stretch pb-4">
+      <app-commander-details class="flex-1 flex overflow-auto items-stretch" [item]="selectedItem$ | async"
+        [appliedGuiseId]="appliedGuiseId$ | async" (applyGuise)="onApplyGuise($event)"
+        (resetToCommander)="onResetToCommander()">
+      </app-commander-details>
+    </section>
+
+  </main>
+</div>

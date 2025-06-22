@@ -1,0 +1,6 @@
+<div class="w-full flex items-end justify-center overflow-hidden">
+  <ng-container *ngIf="selectedItem">
+    <img #avatarImg [src]="selectedItem.avatarUrl || ''" [alt]="selectedItem.title || ''"
+      class="max-h-[90dvh] object-contain" />
+  </ng-container>
+</div>

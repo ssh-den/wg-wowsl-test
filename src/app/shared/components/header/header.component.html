@@ -1,0 +1,50 @@
+<header class="flex justify-between items-center
+              py-4
+              lg:py-4
+              2xl:py-8">
+
+  <!-- Commander Title and Rank -->
+  <div class="flex items-center gap-1 lg:gap-2 font-bold text-gold">
+    <a href="/">
+      <img src="assets/svg/arrow_left.svg" class="mr-2 lg:mr-4 h-5 lg:h-6 2xl:h-8 cursor-pointer">
+    </a>
+    <span class="text-xl lg:text-4xl 2xl:text-6xl">{{ commander.rank }}</span>
+    <img src="assets/svg/cmd_badge_legend_4.svg" alt="Rank Icon" class="h-8 lg:h-14 2xl:h-20" />
+    <div class="flex flex-col leading-tight">
+      <span class="uppercase tracking-wide text-base lg:text-2xl 2xl:text-5xl">{{ commander.title }}</span>
+      <span class="uppercase tracking-wider text-gold-muted font-semibold text-xs lg:text-base 2xl:text-3xl">
+        Rank {{ commander.rank }} {{ commander.isLegendary ? 'Legendary' : '' }} Commander
+      </span>
+    </div>
+  </div>
+
+  <!-- User data container -->
+  <div class="flex items-center text-white gap-3 lg:gap-4 2xl:gap-8">
+
+    <!--User resources -->
+    <div class="flex font-semibold text-sm gap-3 lg:text-base lg:gap-4 2xl:text-4xl whitespace-nowrap">
+      <ng-container *ngFor="let res of resources">
+        <div class="flex gap-1 items-center" [ngClass]="res.class">
+          <ng-container *ngIf="res.isRaw; else formatted">
+            {{ getUserValue(user, res.key) }}
+          </ng-container>
+          <ng-template #formatted>
+            {{ getUserValue(user, res.key) | shortNumber }}
+          </ng-template>
+          <span *ngIf="res.suffix"> {{ res.suffix }}</span>
+          <img class="h-[1em] w-auto" [src]="'assets/svg/' + res.icon" />
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- Divider -->
+    <div class="hidden lg:block lg:w-1 lg:h-10 lg:bg-white 2xl:h-20 2xl:w-2"></div>
+
+    <!-- User avatar -->
+    <div class="flex items-center gap-1 lg:gap-2">
+      <img [src]="user.avatarUrl" alt="avatar" class="w-8 h-8 2xl:w-20 2xl:h-20" />
+      <span class="text-sm lg:text-base 2xl:text-4xl font-semibold">{{ user.nickname }}</span>
+    </div>
+  </div>
+
+</header>

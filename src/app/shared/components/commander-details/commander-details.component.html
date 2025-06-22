@@ -1,0 +1,48 @@
+<div class="flex flex-1 flex-col scrollbar-hide">
+
+  <!-- In stock counter -->
+  <div class="flex-1 overflow-y-auto pb-4 pt-4 2xl:pt-6 text-white" *ngIf="item">
+    <div class="flex flex-row gap-2 items-center mb-1 lg:mb-2 2xl:gap-4 2xl:mb-4">
+      <h4 class="font-semibold px-2 lg:px-3 py-1 bg-white text-slate-900 text-xs lg:text-base 2xl:text-3xl">
+        {{ item.availableStock }} / {{ item.stock }}
+      </h4>
+      <span class="uppercase font-semibold text-slate-400 text-xs lg:text-base 2xl:text-3xl">in stock</span>
+    </div>
+
+    <!-- Commander data -->
+    <section class="mb-6 lg:mb-8 2xl:mb-10">
+      <app-commander-title [title]="item.title"></app-commander-title>
+
+      <!-- General or national guise -->
+      <div
+        class="flex flex-row items-center gap-1 lg:gap-2 mt-1 lg:mt-3 tracking-wider font-semibold text-[10px] lg:text-sm 2xl:text-2xl"
+        *ngIf="item.type !== 'COMMANDER'">
+        <img [src]="item.type === 'GENERAL' ? '/assets/svg/guise_national_c.svg' : '/assets/svg/guise_personal_c.svg'"
+          class="h-4 w-4 lg:h-6 lg:w-6 2xl:h-8 2xl:w-8" />
+        <p class="uppercase">{{ item.type === 'GENERAL' ? 'General guise' : 'National guise' }}</p>
+      </div>
+    </section>
+
+    <!-- Info panels -->
+    <div class="relative" [@fadeSlide] (@fadeSlide.done)="onAnimationDone()" *ngIf="visibleView">
+      <app-commander-details-panel *ngIf="visibleView === 'commanderDetails'"></app-commander-details-panel>
+      <app-commander-bio-panel *ngIf="visibleView === 'commanderBio'"></app-commander-bio-panel>
+      <app-guise-details-panel *ngIf="visibleView === 'guiseDetails'" [effects]="item.guiseEffects ?? []">
+      </app-guise-details-panel>
+      <app-guise-bio-panel *ngIf="visibleView === 'guiseBio'"></app-guise-bio-panel>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="flex flex-row justify-end text-white gap-2 2xl:gap-4" *ngIf="item">
+    <app-button *ngIf="item.type === 'COMMANDER' && !showBio" label="Show Commander Bio"
+      (click)="onShowBio()"></app-button>
+    <app-button *ngIf="item.type !== 'COMMANDER' && !showBio" label="Show Guise Bio" (click)="onShowBio()"></app-button>
+    <app-button *ngIf="showBio" label="Back to Details" (click)="backToDetails()"></app-button>
+
+    <app-button *ngIf="item.type === 'COMMANDER' && appliedGuiseId !== null" label="Apply Commander"
+      (click)="resetToCommander.emit()"></app-button>
+    <app-button *ngIf="item.type !== 'COMMANDER' && appliedGuiseId !== item.id" label="Apply Guise"
+      (click)="onApply()"></app-button>
+  </div>
+</div>
