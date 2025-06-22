@@ -3,8 +3,6 @@
 Test assignment for the UI Tech Artist position.
 This project is implemented using **Angular**, **Tailwind CSS**, and a responsive approach for both desktop and mobile views.
 
----
-
 ## 🛠️ Tech Stack
 
 - **Angular 19**
@@ -14,8 +12,6 @@ This project is implemented using **Angular**, **Tailwind CSS**, and a responsiv
 - Centralized state and service-driven communication
 - Responsive layout (flexible ui, orientation detection)
 - Lazy-loaded feature modules (desktop & mobile)
-
----
 
 ## 📁 Project Structure
 
@@ -27,8 +23,6 @@ The main codebase is located under `src/`, structured into:
 - `models/` — typed data models for commander, guise, user, etc.
 
 Static assets (images, icons, backgrounds) are stored in the `public/` folder.
-
----
 
 ## Getting Started
 
@@ -52,8 +46,6 @@ ng serve
 ```
 
 Navigate to [http://localhost:4200](http://localhost:4200) — the app will automatically reload on source changes.
-
----
 
 ## 📝 Font
 
