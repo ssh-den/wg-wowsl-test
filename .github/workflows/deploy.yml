@@ -24,8 +24,7 @@ jobs:
 
       - run: |
           npx ng build --configuration production --base-href /wg-wowsl-test/
-          ls -la dist/wg-test/browser
-          cat dist/wg-test/browser/styles-*.css | head -n 50
+          cp dist/wg-test/index.html dist/wg-test/404.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
