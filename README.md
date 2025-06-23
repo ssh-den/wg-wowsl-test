@@ -3,6 +3,10 @@
 Test assignment for the UI Tech Artist position.
 This project is implemented using **Angular**, **Tailwind CSS**, and a responsive approach for both desktop and mobile views.
 
+## 🔗 Live Demo
+
+Try it out: [ssh-den.github.io/wg-wowsl-test](https://ssh-den.github.io/wg-wowsl-test/)
+
 ## 🛠️ Tech Stack
 
 - **Angular 19**
