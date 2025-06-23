@@ -24,7 +24,7 @@ jobs:
 
       - run: |
           npx ng build --configuration production --base-href /wg-wowsl-test/
-          cp dist/wg-test/index.html dist/wg-test/404.html
+          cp dist/wg-test/browser/index.html dist/wg-test/browser/404.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
