@@ -18,6 +18,7 @@ export class HeaderComponent {
     class?: string;
     suffix?: string;
     isRaw?: boolean;
+    alt?: string;
   }[] = [];
 
   getUserValue(user: User, key: string): any {

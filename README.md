@@ -3,16 +3,21 @@
 Test assignment for the UI Tech Artist position.
 This project is implemented using **Angular**, **Tailwind CSS**, and a responsive approach for both desktop and mobile views.
 
-## Live Demo 
+## Live Demo (Task 1 & 2)
 
 **Main page (layout selector):**
 [https://ssh-den.github.io/wg-wowsl-test/](https://ssh-den.github.io/wg-wowsl-test/)
 
-**Desktop version:**
+**Desktop version (task 1):**
 [https://ssh-den.github.io/wg-wowsl-test/desktop](https://ssh-den.github.io/wg-wowsl-test/desktop)
 
-**Mobile version:**
+**Mobile version (task 2):**
 [https://ssh-den.github.io/wg-wowsl-test/mobile](https://ssh-den.github.io/wg-wowsl-test/mobile)
+
+## Task 3 — UX/UI Game Review
+
+**NBA 2K24 UX/UI review (task 3):**  
+[https://github.com/ssh-den/wg-wowsl-test/NBA_2K24_UX_UI_Review.pdf](https://github.com/ssh-den/wg-wowsl-test/NBA_2K24_UX_UI_Review.pdf)
 
 ## Tech Stack
 

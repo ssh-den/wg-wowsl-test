@@ -10,7 +10,7 @@
     </div>
 
     <!-- Commander data -->
-    <section class="mb-6 lg:mb-8 2xl:mb-10">
+    <div class="mb-4 lg:mb-8 2xl:mb-10">
       <app-commander-title [title]="item.title"></app-commander-title>
 
       <!-- General or national guise -->
@@ -21,7 +21,7 @@
           class="h-4 w-4 lg:h-6 lg:w-6 2xl:h-8 2xl:w-8" />
         <p class="uppercase">{{ item.type === 'GENERAL' ? 'General guise' : 'National guise' }}</p>
       </div>
-    </section>
+    </div>
 
     <!-- Info panels -->
     <div class="relative" [@fadeSlide] (@fadeSlide.done)="onAnimationDone()" *ngIf="visibleView">
