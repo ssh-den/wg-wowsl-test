@@ -22,7 +22,7 @@ jobs:
       - run: npm ci
       - run: npx ng build --configuration production --base-href /wg-wowsl-test/
 
-      - uses: actions/upload-pages-artifact@v2
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: dist/wg-test
 
@@ -33,5 +33,5 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@v2
+      - uses: actions/deploy-pages@v4
         id: deployment
