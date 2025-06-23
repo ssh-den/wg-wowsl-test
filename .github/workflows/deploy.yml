@@ -12,6 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
@@ -20,11 +21,14 @@ jobs:
           node-version: 18
 
       - run: npm ci
-      - run: npx ng build --configuration production --base-href /wg-wowsl-test/
+
+      - run: |
+          npx ng build --configuration production --base-href /wg-wowsl-test/
+          ls -la dist/wg-test/browser
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/wg-test
+          path: dist/wg-test/browser
 
   deploy:
     needs: build
@@ -32,6 +36,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - uses: actions/deploy-pages@v4
         id: deployment
