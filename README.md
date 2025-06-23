@@ -17,7 +17,7 @@ This project is implemented using **Angular**, **Tailwind CSS**, and a responsiv
 ## UX/UI Game Review (Task 3)
 
 **NBA 2K24 UX/UI review**  
-[Read on GitHub](https://github.com/ssh-den/wg-wowsl-test/blob/main/NBA_2K24_UX_UI_Review.pdf) • [Open Raw PDF](https://raw.githubusercontent.com/ssh-den/wg-wowsl-test/main/NBA_2K24_UX_UI_Review.pdf)
+[Open Raw PDF](https://raw.githubusercontent.com/ssh-den/wg-wowsl-test/main/NBA_2K24_UX_UI_Review.pdf)
 
 ## Tech Stack
 
