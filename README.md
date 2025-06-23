@@ -14,10 +14,10 @@ This project is implemented using **Angular**, **Tailwind CSS**, and a responsiv
 **Mobile version (task 2):**
 [https://ssh-den.github.io/wg-wowsl-test/mobile](https://ssh-den.github.io/wg-wowsl-test/mobile)
 
-## Task 3 — UX/UI Game Review
+## UX/UI Game Review (Task 3)
 
-**NBA 2K24 UX/UI review (task 3):**  
-[https://github.com/ssh-den/wg-wowsl-test/NBA_2K24_UX_UI_Review.pdf](https://github.com/ssh-den/wg-wowsl-test/NBA_2K24_UX_UI_Review.pdf)
+**NBA 2K24 UX/UI review**  
+[Read on GitHub](https://github.com/ssh-den/wg-wowsl-test/blob/main/NBA_2K24_UX_UI_Review.pdf) • [Open Raw PDF](https://raw.githubusercontent.com/ssh-den/wg-wowsl-test/main/NBA_2K24_UX_UI_Review.pdf)
 
 ## Tech Stack
 
