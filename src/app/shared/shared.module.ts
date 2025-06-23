@@ -14,6 +14,7 @@ import { CommanderDetailsPanelComponent } from './components/commander-details-p
 import { CommanderBioPanelComponent } from './components/commander-bio-panel/commander-bio-panel.component';
 import { GuiseDetailsPanelComponent } from './components/guise-details-panel/guise-details-panel.component';
 import { GuiseBioPanelComponent } from './components/guise-bio-panel/guise-bio-panel.component';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -35,7 +36,8 @@ import { GuiseBioPanelComponent } from './components/guise-bio-panel/guise-bio-p
     CommanderDetailsPanelComponent,
     CommanderBioPanelComponent,
     GuiseDetailsPanelComponent,
-    GuiseBioPanelComponent
+    GuiseBioPanelComponent,
+    RouterLink
 ],
   exports: [
     HeaderComponent,

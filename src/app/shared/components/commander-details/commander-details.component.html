@@ -17,7 +17,7 @@
       <div
         class="flex flex-row items-center gap-1 lg:gap-2 mt-1 lg:mt-3 tracking-wider font-semibold text-[10px] lg:text-sm 2xl:text-2xl"
         *ngIf="item.type !== 'COMMANDER'">
-        <img [src]="item.type === 'GENERAL' ? '/assets/svg/guise_national_c.svg' : '/assets/svg/guise_personal_c.svg'"
+        <img [src]="item.type === 'GENERAL' ? 'assets/svg/guise_national_c.svg' : 'assets/svg/guise_personal_c.svg'"
           class="h-4 w-4 lg:h-6 lg:w-6 2xl:h-8 2xl:w-8" />
         <p class="uppercase">{{ item.type === 'GENERAL' ? 'General guise' : 'National guise' }}</p>
       </div>
