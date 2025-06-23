@@ -3,11 +3,18 @@
 Test assignment for the UI Tech Artist position.
 This project is implemented using **Angular**, **Tailwind CSS**, and a responsive approach for both desktop and mobile views.
 
-## 🔗 Live Demo
+## Live Demo 
 
-Try it out: [ssh-den.github.io/wg-wowsl-test](https://ssh-den.github.io/wg-wowsl-test/)
+**Main page (layout selector):**
+[https://ssh-den.github.io/wg-wowsl-test/](https://ssh-den.github.io/wg-wowsl-test/)
 
-## 🛠️ Tech Stack
+**Desktop version:**
+[https://ssh-den.github.io/wg-wowsl-test/desktop](https://ssh-den.github.io/wg-wowsl-test/desktop)
+
+**Mobile version:**
+[https://ssh-den.github.io/wg-wowsl-test/mobile](https://ssh-den.github.io/wg-wowsl-test/mobile)
+
+## Tech Stack
 
 - **Angular 19**
 - **Tailwind CSS**
@@ -17,7 +24,7 @@ Try it out: [ssh-den.github.io/wg-wowsl-test](https://ssh-den.github.io/wg-wowsl
 - Responsive layout (flexible ui, orientation detection)
 - Lazy-loaded feature modules (desktop & mobile)
 
-## 📁 Project Structure
+## Project Structure
 
 The main codebase is located under `src/`, structured into:
 
@@ -51,6 +58,6 @@ ng serve
 
 Navigate to [http://localhost:4200](http://localhost:4200) — the app will automatically reload on source changes.
 
-## 📝 Font
+## Font
 
 To avoid licensing issues, instead **DIN 2014** font,  I used [**Barlow**](https://fonts.google.com/specimen/Barlow) — an open-source, geometric sans-serif font with a similar visual tone.
