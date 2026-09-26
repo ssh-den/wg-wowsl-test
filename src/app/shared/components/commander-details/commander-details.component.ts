@@ -15,12 +15,9 @@ import {
   styleUrl: './commander-details.component.scss',
   animations: [
     trigger('fadeSlide', [
-      transition(':enter', [
+      transition('* => *', [
         style({ opacity: 0, transform: 'translateX(-50px)' }),
         animate('300ms ease-out', style({ opacity: 1, transform: 'translateX(0)' }))
-      ]),
-      transition(':leave', [
-        animate('300ms ease-in', style({ opacity: 0, transform: 'translateX(50px)' }))
       ])
     ])
   ]
@@ -33,20 +30,10 @@ export class CommanderDetailsComponent implements OnChanges {
   @Output() resetToCommander = new EventEmitter<void>();
 
   showBio = false;
-  pendingView: 'commanderDetails' | 'commanderBio' | 'guiseDetails' | 'guiseBio' | null = null;
-  visibleView: typeof this.pendingView = null;
+  visibleView: 'commanderDetails' | 'commanderBio' | 'guiseDetails' | 'guiseBio' | null = null;
 
-  switchView(view: typeof this.pendingView) {
-    if (this.visibleView === view) return;
-    this.pendingView = view;
-    this.visibleView = null;
-  }
-
-  onAnimationDone() {
-    if (this.pendingView) {
-      this.visibleView = this.pendingView;
-      this.pendingView = null;
-    }
+  switchView(view: NonNullable<typeof this.visibleView>) {
+    this.visibleView = view;
   }
 
   onShowBio() {
@@ -61,18 +48,11 @@ export class CommanderDetailsComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['item']) {
-      const first = changes['item'].firstChange;
-
       const targetView = this.item?.type === 'COMMANDER'
         ? (this.showBio ? 'commanderBio' : 'commanderDetails')
         : (this.showBio ? 'guiseBio' : 'guiseDetails');
 
-      if (first) {
-        this.visibleView = targetView;
-        this.pendingView = null;
-      } else {
-        this.switchView(targetView);
-      }
+      this.switchView(targetView);
     }
   }
 
