@@ -11,8 +11,8 @@
     <span class="text-xl lg:text-4xl 2xl:text-6xl">{{ commander.rank }}</span>
     <img src="assets/svg/cmd_badge_legend_4.svg" alt="Rank Icon" class="h-8 lg:h-14 2xl:h-20" />
     <div class="flex flex-col leading-tight">
-      <span class="uppercase tracking-wide text-base lg:text-2xl 2xl:text-5xl">{{ commander.title }}</span>
-      <span class="uppercase tracking-wider text-gold-muted font-semibold text-xs lg:text-base 2xl:text-3xl">
+      <span class="uppercase tracking-wide text-base lg:text-2xl 2xl:text-3xl">{{ commander.title }}</span>
+      <span class="uppercase tracking-wider text-gold-muted font-semibold text-xs lg:text-base 2xl:text-xl">
         Rank {{ commander.rank }} {{ commander.isLegendary ? 'Legendary' : '' }} Commander
       </span>
     </div>
@@ -22,7 +22,7 @@
   <div class="flex items-center text-white gap-3 lg:gap-4 2xl:gap-8">
 
     <!--User resources -->
-    <div class="flex font-semibold text-sm gap-3 lg:text-base lg:gap-4 2xl:text-4xl whitespace-nowrap">
+    <div class="flex font-semibold text-sm gap-3 lg:text-base lg:gap-4 2xl:text-2xl whitespace-nowrap">
       <ng-container *ngFor="let res of resources">
         <div class="flex gap-1 items-center" [ngClass]="res.class">
           <ng-container *ngIf="res.isRaw; else formatted">
@@ -43,7 +43,7 @@
     <!-- User avatar -->
     <div class="flex items-center gap-1 lg:gap-2">
       <img [src]="user.avatarUrl" alt="User avatar" class="w-8 h-8 2xl:w-20 2xl:h-20" />
-      <span class="text-sm lg:text-base 2xl:text-4xl font-semibold">{{ user.nickname }}</span>
+      <span class="text-sm lg:text-base 2xl:text-2xl font-semibold">{{ user.nickname }}</span>
     </div>
   </div>
 

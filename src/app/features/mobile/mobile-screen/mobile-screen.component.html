@@ -39,7 +39,7 @@
 
     <!-- Commander details -->
     <section class="flex-1 flex flex-col overflow-hidden items-stretch pb-4">
-      <app-commander-details class="flex-1 flex overflow-auto items-stretch" [item]="selectedItem$ | async"
+      <app-commander-details class="flex-1 min-h-0 min-w-0 flex overflow-hidden items-stretch" [item]="selectedItem$ | async"
         [appliedGuiseId]="appliedGuiseId$ | async" (applyGuise)="onApplyGuise($event)"
         (resetToCommander)="onResetToCommander()">
       </app-commander-details>

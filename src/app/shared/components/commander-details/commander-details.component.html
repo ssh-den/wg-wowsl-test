@@ -1,4 +1,4 @@
-<div class="flex flex-1 flex-col scrollbar-hide">
+<div class="flex flex-1 min-h-0 min-w-0 flex-col scrollbar-hide">
 
   <!-- In stock counter -->
   <div class="flex-1 overflow-y-auto [overflow-anchor:none] pb-4 pt-4 2xl:pt-6 text-white" *ngIf="item">
@@ -34,7 +34,7 @@
   </div>
 
   <!-- Buttons -->
-  <div class="flex flex-row justify-end text-white gap-2 2xl:gap-4" *ngIf="item">
+  <div class="flex shrink-0 flex-row justify-end text-white gap-2 2xl:gap-4" *ngIf="item">
     <app-button *ngIf="item.type === 'COMMANDER' && !showBio" label="Show Commander Bio"
       (click)="onShowBio()"></app-button>
     <app-button *ngIf="item.type !== 'COMMANDER' && !showBio" label="Show Guise Bio" (click)="onShowBio()"></app-button>
