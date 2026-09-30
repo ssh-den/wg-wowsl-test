@@ -1,0 +1,7 @@
+:host {
+  --commander-avatar-height: 85dvh;
+}
+
+img {
+  max-height: var(--commander-avatar-height);
+}

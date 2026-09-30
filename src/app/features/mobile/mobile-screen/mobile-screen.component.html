@@ -23,13 +23,13 @@
   <main class="z-10 flex-1 flex gap-4 px-12 overflow-hidden">
 
     <!-- Big commander avatar -->
-    <section class="w-[28%] flex flex-col justify-end overflow-hidden">
+    <section class="w-[32%] flex flex-col justify-end overflow-hidden">
       <app-commander-avatar-max [selectedItem]="selectedItem$ | async">
       </app-commander-avatar-max>
     </section>
 
     <!-- List of guises -->
-    <section class="w-[15%] min-h-0 overflow-y-auto overflow-x-visible pb-4 scrollbar-hide">
+    <section class="w-[calc(15%+3rem)] -mx-6 px-6 min-h-0 overflow-y-auto overflow-x-hidden pb-4 scrollbar-hide">
       <ng-container *ngIf="items$ | async as items">
         <app-commander-list [items]="items" [appliedGuiseId]="appliedGuiseId$ | async"
           [selectedItemId]="(selectedItem$ | async)?.id ?? null" (itemSelected)="onItemSelected($event)">
